@@ -110,31 +110,35 @@ export default function PingCheckLanding() {
                 {/* MAIN BUTTON STACK */}
 <div className="mt-8 flex flex-col items-center gap-4 w-full max-w-md mx-auto">
 
+  {/* MAIN BUTTON AREA */}
+<div className="mt-8 w-full max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+
   {/* Home Users */}
   <a
     href="/home"
-    className="w-full rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+    className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
   >
     🏡 Home Users
-  </a>
-
-  {/* Get Free IT Health Check */}
-  <a
-    href="#contact"
-    className="w-full rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
-  >
-    🔍 Get Free IT Health Check
   </a>
 
   {/* Business Users */}
   <a
     href="/business"
-    className="w-full rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+    className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
   >
     🏢 Business Users
   </a>
 
+  {/* Get Free IT Health Check – spans both columns on desktop */}
+  <a
+    href="#contact"
+    className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
+  >
+    🔍 Get Free IT Health Check
+  </a>
+
 </div>
+
 
       </section>
 
