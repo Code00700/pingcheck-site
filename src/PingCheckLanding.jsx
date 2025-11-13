@@ -76,8 +76,8 @@ export default function PingCheckLanding() {
         </div>
       </div>
 
-      {/* HERO – Design A only */}
-      <section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
+      {/* HERO – Light Azure style */}
+      <section className="relative isolate bg-gradient-to-br from-sky-50 via-sky-100 to-blue-200 text-slate-900">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
           {/* LEFT SIDE: TEXT + BUTTONS */}
           <div>
@@ -86,7 +86,7 @@ export default function PingCheckLanding() {
               <span className="opacity-90">Secure Automation.</span>
             </h1>
 
-            <p className="mt-4 max-w-prose text-white/90">
+            <p className="mt-4 max-w-prose text-slate-700">
               PingCheck keeps your business and home technology fast, protected,
               and easy to manage — from Wi-Fi and cybersecurity to cloud and
               automation.
@@ -97,7 +97,7 @@ export default function PingCheckLanding() {
               {/* Home Users */}
               <a
                 href="/home"
-                className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+                className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg"
               >
                 🏡 Home Users
               </a>
@@ -105,7 +105,7 @@ export default function PingCheckLanding() {
               {/* Business Users */}
               <a
                 href="/business"
-                className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+                className="rounded-2xl bg-emerald-500 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg"
               >
                 🏢 Business Users
               </a>
@@ -113,85 +113,85 @@ export default function PingCheckLanding() {
               {/* Get Free IT Health Check – spans both columns on desktop */}
               <a
                 href="#contact"
-                className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
+                className="md:col-span-2 rounded-2xl bg-blue-600 px-8 py-4 text-center font-bold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg animate-pulse"
               >
                 🔍 Get Free IT Health Check
               </a>
             </div>
 
-            <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
+            <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-slate-600">
               <div>🇦🇺 Melbourne-based</div>
               <div>✅ 24/7 Support</div>
               <div>🔒 Cybersecurity First</div>
             </div>
           </div>
 
-          {/* RIGHT SIDE: SALES HIGHLIGHTS – glassmorphism, blended with hero */}
+          {/* RIGHT SIDE: SALES HIGHLIGHTS – light, blended with hero */}
           <div>
-            <div className="rounded-3xl border border-white/15 bg-slate-950/25 text-white shadow-xl shadow-black/40 backdrop-blur-xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-200">
+            <div className="rounded-3xl border border-slate-200/80 bg-white/80 text-slate-900 shadow-xl shadow-slate-300/40 backdrop-blur-xl p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
                 Made for growing teams
               </p>
               <h2 className="mt-2 text-2xl font-bold">
                 Perfect for modern Australian businesses.
               </h2>
-              <p className="mt-2 text-sm text-slate-100/90">
+              <p className="mt-2 text-sm text-slate-700">
                 We specialise in networks, security, and cloud for:
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
-                <span className="rounded-full bg-black/40 px-3 py-1 text-white border border-white/10">
+                <span className="rounded-full bg-slate-900 text-white px-3 py-1">
                   🛍 Retail & storefronts
                 </span>
-                <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-emerald-100 border border-emerald-300/40">
+                <span className="rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 border border-emerald-200">
                   🏥 Medical & clinics
                 </span>
-                <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-indigo-100 border border-indigo-300/40">
+                <span className="rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 border border-indigo-200">
                   🏢 Remote & multi-site teams
                 </span>
               </div>
 
               <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                <div className="rounded-2xl bg-slate-950/50 border border-white/10 p-3">
-                  <div className="text-xs font-semibold text-slate-300">
+                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
                     NETWORK
                   </div>
-                  <div className="text-sm font-bold text-white">
+                  <div className="text-sm font-bold text-slate-900">
                     Stable Wi-Fi & VPN
                   </div>
-                  <p className="mt-1 text-xs text-slate-300/80">
+                  <p className="mt-1 text-xs text-slate-500">
                     Design, deploy, and monitor your network.
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-slate-950/50 border border-white/10 p-3">
-                  <div className="text-xs font-semibold text-slate-300">
+                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
                     SECURITY
                   </div>
-                  <div className="text-sm font-bold text-white">
+                  <div className="text-sm font-bold text-slate-900">
                     Lock down access
                   </div>
-                  <p className="mt-1 text-xs text-slate-300/80">
+                  <p className="mt-1 text-xs text-slate-500">
                     Firewalls, endpoint security, and best-practice controls.
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-slate-950/50 border border-white/10 p-3">
-                  <div className="text-xs font-semibold text-slate-300">
+                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
                     MANAGED IT
                   </div>
-                  <div className="text-sm font-bold text-white">
+                  <div className="text-sm font-bold text-slate-900">
                     Simple monthly support
                   </div>
-                  <p className="mt-1 text-xs text-slate-300/80">
+                  <p className="mt-1 text-xs text-slate-500">
                     One fixed monthly fee for support and monitoring.
                   </p>
                 </div>
               </div>
 
-              <p className="mt-5 text-xs text-slate-200/90">
+              <p className="mt-5 text-xs text-slate-600">
                 Start with a{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-slate-900">
                   free IT health check
                 </span>{" "}
                 – no lock-in contracts.
