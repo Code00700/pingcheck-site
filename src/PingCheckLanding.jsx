@@ -1,44 +1,20 @@
-import { useState } from "react";
+const brand = {
+  phonePrimary: "1300 000 000",
+  phoneMobile: "+61 400 123 456",
+  email: "hello@pingcheck.com.au",
+  whatsappLink:
+    "https://wa.me/61400123456?text=Hi%20PingCheck!%20I%27d%20like%20help%20with%20my%20IT%20network.",
+  address: "Melbourne, Australia",
+  logoSrc: "/logo-pingcheck.svg",
+  partnerBadges: [
+    { name: "Cisco Meraki", src: "/badges/meraki.svg" },
+    { name: "Microsoft", src: "/badges/microsoft.svg" },
+    { name: "Cisco", src: "/badges/cisco.svg" },
+    { name: "AWS", src: "/badges/aws.svg" },
+  ],
+};
 
 export default function PingCheckLanding() {
-  const [variant, setVariant] = useState("bold"); // bold | split | minimal
-
-  const brand = {
-    phonePrimary: "1300 000 000",
-    phoneMobile: "+61 400 123 456",
-    email: "hello@pingcheck.com.au",
-    whatsappLink:
-      "https://wa.me/61400123456?text=Hi%20PingCheck!%20I%27d%20like%20help%20with%20my%20IT%20network.",
-    address: "Melbourne, Australia",
-    logoSrc: "/logo-pingcheck.svg",
-    partnerBadges: [
-      { name: "Cisco Meraki", src: "/badges/meraki.svg" },
-      { name: "Microsoft", src: "/badges/microsoft.svg" },
-      { name: "Cisco", src: "/badges/cisco.svg" },
-      { name: "AWS", src: "/badges/aws.svg" },
-    ],
-  };
-
-  const palette = {
-    bold: {
-      bg: "from-indigo-600 via-violet-600 to-fuchsia-600",
-      text: "text-white",
-      card: "bg-white/95 text-slate-800",
-    },
-    split: {
-      bg: "from-slate-900 via-slate-800 to-slate-900",
-      text: "text-white",
-      card: "bg-white/95 text-slate-800",
-    },
-    minimal: {
-      bg: "from-white via-white to-white",
-      text: "text-slate-900",
-      card: "bg-white text-slate-800",
-    },
-  };
-
-  const p = palette[variant];
-
   const handleQuickFormSubmit = async (e) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
@@ -112,222 +88,87 @@ export default function PingCheckLanding() {
             >
               Email
             </a>
-            <select
-              aria-label="Choose design"
-              value={variant}
-              onChange={(e) => setVariant(e.target.value)}
-              className="rounded-full border border-slate-600 bg-slate-900 px-3 py-1 text-xs text-slate-200"
-            >
-              <option value="bold">Design A – Bold Hero</option>
-              <option value="split">Design B – Home & Business</option>
-              <option value="minimal">Design C – Minimal</option>
-            </select>
           </div>
         </div>
       </div>
 
-      {/* HERO VARIANTS */}
-      {variant === "bold" && (
-        <section
-          className={`relative isolate bg-gradient-to-br ${p.bg} ${p.text}`}
-        >
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-black leading-tight md:text-5xl">
-                Smarter IT. Stronger Networks.{" "}
-                <span className="opacity-90">Secure Automation.</span>
-              </h1>
-              <p className="mt-4 max-w-prose text-white/90">
-                PingCheck keeps your business and home technology fast,
-                protected, and easy to manage — from Wi-Fi and cybersecurity to
-                cloud and automation.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                  href={`tel:${brand.phonePrimary}`}
-                  className="rounded-2xl bg-white px-5 py-3 font-semibold text-slate-900 shadow-lg shadow-black/10"
-                >
-                  📞 Call {brand.phonePrimary}
-                </a>
-                <a
-                  href="#contact"
-                  className="rounded-2xl bg-black/20 px-5 py-3 font-semibold text-white ring-1 ring-inset ring-white/30 hover:bg-black/30"
-                >
-                  Get a Free IT Health Check
-                </a>
-                <a
-                  href={brand.whatsappLink}
-                  className="rounded-2xl bg-emerald-400 px-5 py-3 font-semibold text-slate-900"
-                >
-                  💬 Chat on WhatsApp
-                </a>
-              </div>
-              <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
-                <div>🇦🇺 Melbourne-based</div>
-                <div>✅ 24/7 Support</div>
-                <div>🔒 Cybersecurity First</div>
-              </div>
-            </div>
-            <div>
-              <div className={`rounded-3xl ${p.card} shadow-xl shadow-black/20`}>
-                <div className="border-b border-slate-200 p-4 font-semibold">
-                  Quick Contact
-                </div>
-                <form className="grid gap-3 p-4" onSubmit={handleQuickFormSubmit}>
-                  <input
-                    className="rounded-xl border border-slate-300 px-4 py-3"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                  />
-                  <input
-                    className="rounded-xl border border-slate-300 px-4 py-3"
-                    name="contact"
-                    placeholder="Phone or email"
-                    required
-                  />
-                  <textarea
-                    className="rounded-xl border border-slate-300 px-4 py-3"
-                    name="message"
-                    placeholder="What do you need help with?"
-                    rows={4}
-                  />
-                  <button
-                    type="submit"
-                    className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white hover:opacity-90"
-                  >
-                    Request a Callback
-                  </button>
-                  <p className="text-xs text-slate-500">
-                    Or call us now: {brand.phoneMobile}
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {variant === "split" && (
-        <section
-          className={`relative isolate bg-gradient-to-br ${p.bg} ${p.text}`}
-        >
-          <div className="mx-auto max-w-7xl px-6 py-20">
-            <h1 className="text-center text-4xl font-black md:text-5xl">
-              Technology Made Simple — for Home & Business
+      {/* HERO – Design A only */}
+      <section className="relative isolate bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
+          <div>
+            <h1 className="text-4xl font-black leading-tight md:text-5xl">
+              Smarter IT. Stronger Networks.{" "}
+              <span className="opacity-90">Secure Automation.</span>
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-white/90">
-              Choose your path and get help in minutes. We’ll tailor the
-              experience to your needs.
+            <p className="mt-4 max-w-prose text-white/90">
+              PingCheck keeps your business and home technology fast, protected,
+              and easy to manage — from Wi-Fi and cybersecurity to cloud and
+              automation.
             </p>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
-                className={`group rounded-3xl ${p.card} p-6 shadow-xl ring-1 ring-black/5 transition hover:-translate-y-0.5`}
-                href="#home"
+                href={`tel:${brand.phonePrimary}`}
+                className="rounded-2xl bg-white px-5 py-3 font-semibold text-slate-900 shadow-lg shadow-black/10"
               >
-                <div className="mb-2 text-sm font-semibold text-emerald-600">
-                  Home
-                </div>
-                <h3 className="text-2xl font-bold">Home IT & Wi-Fi</h3>
-                <p className="mt-2 text-slate-600">
-                  Whole-home Wi-Fi, parental controls, smart cameras, and fast
-                  remote support.
-                </p>
-                <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-slate-700">
-                  <li>• Whole-home Wi-Fi</li>
-                  <li>• Smart cameras</li>
-                  <li>• Family filtering</li>
-                  <li>• Remote support</li>
-                </ul>
-                <div className="mt-5 flex gap-3">
-                  <a
-                    href={`tel:${brand.phonePrimary}`}
-                    className="rounded-xl bg-slate-900 px-4 py-2 text-white"
-                  >
-                    Call Now
-                  </a>
-                  <a
-                    href="#contact"
-                    className="rounded-xl border border-slate-300 px-4 py-2 text-slate-800"
-                  >
-                    Book Visit
-                  </a>
-                </div>
+                📞 Call {brand.phonePrimary}
               </a>
               <a
-                className={`group rounded-3xl ${p.card} p-6 shadow-xl ring-1 ring-black/5 transition hover:-translate-y-0.5`}
-                href="#business"
+                href="#contact"
+                className="rounded-2xl bg-black/20 px-5 py-3 font-semibold text-white ring-1 ring-inset ring-white/30 hover:bg-black/30"
               >
-                <div className="mb-2 text-sm font-semibold text-indigo-600">
-                  Business
-                </div>
-                <h3 className="text-2xl font-bold">Managed IT for Business</h3>
-                <p className="mt-2 text-slate-600">
-                  Networks, security, cloud, automation & helpdesk — managed
-                  end-to-end.
-                </p>
-                <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-slate-700">
-                  <li>• Managed networks</li>
-                  <li>• Cybersecurity</li>
-                  <li>• Cloud & M365</li>
-                  <li>• Automation & ERP</li>
-                </ul>
-                <div className="mt-5 flex gap-3">
-                  <a
-                    href={`tel:${brand.phonePrimary}`}
-                    className="rounded-xl bg-slate-900 px-4 py-2 text-white"
-                  >
-                    Call Now
-                  </a>
-                  <a
-                    href="#contact"
-                    className="rounded-xl border border-slate-300 px-4 py-2 text-slate-800"
-                  >
-                    Free IT Health Check
-                  </a>
-                </div>
+                Get a Free IT Health Check
+              </a>
+              <a
+                href={brand.whatsappLink}
+                className="rounded-2xl bg-emerald-400 px-5 py-3 font-semibold text-slate-900"
+              >
+                💬 Chat on WhatsApp
               </a>
             </div>
+            <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
+              <div>🇦🇺 Melbourne-based</div>
+              <div>✅ 24/7 Support</div>
+              <div>🔒 Cybersecurity First</div>
+            </div>
           </div>
-        </section>
-      )}
-
-      {variant === "minimal" && (
-        <section
-          className={`relative isolate bg-gradient-to-br ${p.bg} ${p.text}`}
-        >
-          <div className="mx-auto max-w-5xl px-6 py-16">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-4xl font-black md:text-5xl text-slate-900">
-                PingCheck
-              </h1>
-              <p className="mt-3 text-lg text-slate-600">
-                Remote Network Health. Made Simple.
-              </p>
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-                <a
-                  href={`tel:${brand.phonePrimary}`}
-                  className="rounded-2xl bg-slate-900 px-5 py-3 font-semibold text-white"
-                >
-                  📞 {brand.phonePrimary}
-                </a>
-                <a
-                  href={brand.whatsappLink}
-                  className="rounded-2xl border border-slate-300 px-5 py-3 font-semibold text-slate-700"
-                >
-                  💬 WhatsApp
-                </a>
-                <a
-                  href="#contact"
-                  className="rounded-2xl border border-slate-300 px-5 py-3 font-semibold text-slate-700"
-                >
-                  Get a Quote
-                </a>
+          <div>
+            <div className="rounded-3xl bg-white/95 text-slate-800 shadow-xl shadow-black/20">
+              <div className="border-b border-slate-200 p-4 font-semibold">
+                Quick Contact
               </div>
+              <form className="grid gap-3 p-4" onSubmit={handleQuickFormSubmit}>
+                <input
+                  className="rounded-xl border border-slate-300 px-4 py-3"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+                <input
+                  className="rounded-xl border border-slate-300 px-4 py-3"
+                  name="contact"
+                  placeholder="Phone or email"
+                  required
+                />
+                <textarea
+                  className="rounded-xl border border-slate-300 px-4 py-3"
+                  name="message"
+                  placeholder="What do you need help with?"
+                  rows={4}
+                />
+                <button
+                  type="submit"
+                  className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white hover:opacity-90"
+                >
+                  Request a Callback
+                </button>
+                <p className="text-xs text-slate-500">
+                  Or call us now: {brand.phoneMobile}
+                </p>
+              </form>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-14">
@@ -505,7 +346,10 @@ export default function PingCheckLanding() {
             <div className="text-sm font-semibold text-slate-400">
               Request a callback
             </div>
-            <form className="mt-3 grid gap-3" onSubmit={handleGenericFormSubmit}>
+            <form
+              className="mt-3 grid gap-3"
+              onSubmit={handleGenericFormSubmit}
+            >
               <input
                 className="rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100"
                 name="name"
