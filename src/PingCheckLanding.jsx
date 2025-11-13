@@ -128,7 +128,7 @@ export default function PingCheckLanding() {
 <div className="mt-6">
   <a
     href="#contact"
-    className="block w-full md:w-auto rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg"
+    className="block w-full md:w-auto rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
   >
     🔍 Get Free IT Health Check
   </a>
