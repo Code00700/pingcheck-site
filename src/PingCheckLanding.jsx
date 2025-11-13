@@ -142,44 +142,79 @@ export default function PingCheckLanding() {
       </div>
     </div>
 
-    {/* RIGHT SIDE: QUICK CONTACT FORM */}
+       {/* RIGHT SIDE: SALES HIGHLIGHTS */}
     <div>
-      <div className="rounded-3xl bg-white/95 text-slate-800 shadow-xl shadow-black/20">
-        <div className="border-b border-slate-200 p-4 font-semibold">
-          Quick Contact
+      <div className="rounded-3xl bg-white/95 text-slate-900 shadow-xl shadow-black/20 p-6">
+        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
+          Made for growing teams
+        </p>
+        <h2 className="mt-2 text-2xl font-bold">
+          Perfect for modern Australian businesses.
+        </h2>
+        <p className="mt-2 text-sm text-slate-600">
+          We specialise in networks, security and cloud for:
+        </p>
+
+        <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
+          <span className="rounded-full bg-slate-900 text-white px-3 py-1">
+            🛍 Retail & storefronts
+          </span>
+          <span className="rounded-full bg-emerald-500/10 text-emerald-700 px-3 py-1 border border-emerald-200">
+            🏥 Medical & clinics
+          </span>
+          <span className="rounded-full bg-indigo-500/10 text-indigo-700 px-3 py-1 border border-indigo-200">
+            🏢 Remote & multi-site teams
+          </span>
         </div>
-        <form className="grid gap-3 p-4" onSubmit={handleQuickFormSubmit}>
-          <input
-            className="rounded-xl border border-slate-300 px-4 py-3"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-          <input
-            className="rounded-xl border border-slate-300 px-4 py-3"
-            name="contact"
-            placeholder="Phone or email"
-            required
-          />
-          <textarea
-            className="rounded-xl border border-slate-300 px-4 py-3"
-            name="message"
-            placeholder="What do you need help with?"
-            rows={4}
-          />
-          <button
-            type="submit"
-            className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white hover:opacity-90"
-          >
-            Request a Callback
-          </button>
-          <p className="text-xs text-slate-500">
-            Or call us now: {brand.phoneMobile}
-          </p>
-        </form>
+
+        <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <div className="rounded-2xl bg-slate-50 p-3">
+            <div className="text-xs font-semibold text-slate-500">
+              NETWORK
+            </div>
+            <div className="text-sm font-bold text-slate-900">
+              Stable Wi-Fi & VPN
+            </div>
+            <p className="mt-1 text-xs text-slate-500">
+              Design, deploy, and monitor your network.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-slate-50 p-3">
+            <div className="text-xs font-semibold text-slate-500">
+              SECURITY
+            </div>
+            <div className="text-sm font-bold text-slate-900">
+              Lock down access
+            </div>
+            <p className="mt-1 text-xs text-slate-500">
+              Firewalls, endpoint security, and best-practice controls.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-slate-50 p-3">
+            <div className="text-xs font-semibold text-slate-500">
+              MANAGED IT
+            </div>
+            <div className="text-sm font-bold text-slate-900">
+              Simple monthly support
+            </div>
+            <p className="mt-1 text-xs text-slate-500">
+              One fixed monthly fee for support and monitoring.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-5 text-xs text-slate-500">
+          Start with a{" "}
+          <span className="font-semibold text-slate-900">
+            free IT health check
+          </span>{" "}
+          – no lock-in contracts.
+        </p>
       </div>
     </div>
-  </div>
+
 </section>
 
 
