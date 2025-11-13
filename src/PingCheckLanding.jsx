@@ -107,78 +107,35 @@ export default function PingCheckLanding() {
             </p>
             
             <div className="mt-6 flex flex-wrap items-center gap-3">
-                {/* MAIN USER PATH BUTTONS */}
-<div className="mt-8 flex flex-wrap items-center gap-4">
+                {/* MAIN BUTTON STACK */}
+<div className="mt-8 flex flex-col items-center gap-4 w-full max-w-md mx-auto">
+
+  {/* Home Users */}
   <a
     href="/home"
-    className="w-full md:w-auto rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+    className="w-full rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
   >
     🏡 Home Users
   </a>
 
-  <a
-    href="/business"
-    className="w-full md:w-auto rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
-  >
-    🏢 Business Users
-  </a>
-</div>
-
-{/* MAIN CTA BUTTON */}
-<div className="mt-6">
+  {/* Get Free IT Health Check */}
   <a
     href="#contact"
-    className="block w-full md:w-auto rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
+    className="w-full rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
   >
     🔍 Get Free IT Health Check
   </a>
+
+  {/* Business Users */}
+  <a
+    href="/business"
+    className="w-full rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+  >
+    🏢 Business Users
+  </a>
+
 </div>
 
-
-            </div>
-            <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
-              <div>🇦🇺 Melbourne-based</div>
-              <div>✅ 24/7 Support</div>
-              <div>🔒 Cybersecurity First</div>
-            </div>
-          </div>
-          <div>
-            <div className="rounded-3xl bg-white/95 text-slate-800 shadow-xl shadow-black/20">
-              <div className="border-b border-slate-200 p-4 font-semibold">
-                Quick Contact
-              </div>
-              <form className="grid gap-3 p-4" onSubmit={handleQuickFormSubmit}>
-                <input
-                  className="rounded-xl border border-slate-300 px-4 py-3"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
-                <input
-                  className="rounded-xl border border-slate-300 px-4 py-3"
-                  name="contact"
-                  placeholder="Phone or email"
-                  required
-                />
-                <textarea
-                  className="rounded-xl border border-slate-300 px-4 py-3"
-                  name="message"
-                  placeholder="What do you need help with?"
-                  rows={4}
-                />
-                <button
-                  type="submit"
-                  className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white hover:opacity-90"
-                >
-                  Request a Callback
-                </button>
-                <p className="text-xs text-slate-500">
-                  Or call us now: {brand.phoneMobile}
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Services */}
