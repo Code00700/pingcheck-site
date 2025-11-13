@@ -122,24 +122,49 @@ export default function PingCheckLanding() {
 </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href={`tel:${brand.phonePrimary}`}
-                className="rounded-2xl bg-white px-5 py-3 font-semibold text-slate-900 shadow-lg shadow-black/10"
-              >
-                📞 Call {brand.phonePrimary}
-              </a>
-              <a
-                href="#contact"
-                className="rounded-2xl bg-black/20 px-5 py-3 font-semibold text-white ring-1 ring-inset ring-white/30 hover:bg-black/30"
-              >
-                Get a Free IT Health Check
-              </a>
-              <a
-                href={brand.whatsappLink}
-                className="rounded-2xl bg-emerald-400 px-5 py-3 font-semibold text-slate-900"
-              >
-                💬 Chat on WhatsApp
-              </a>
+                {/* MAIN USER PATH BUTTONS */}
+<div className="mt-8 flex flex-wrap items-center gap-4">
+  <a
+    href="/home"
+    className="w-full md:w-auto rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+  >
+    🏡 Home Users
+  </a>
+
+  <a
+    href="/business"
+    className="w-full md:w-auto rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+  >
+    🏢 Business Users
+  </a>
+</div>
+
+{/* MAIN CTA BUTTON */}
+<div className="mt-6">
+  <a
+    href="#contact"
+    className="block w-full md:w-auto rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg"
+  >
+    🔍 Get Free IT Health Check
+  </a>
+</div>
+
+{/* SMALL SECONDARY BUTTONS */}
+<div className="mt-4 flex flex-wrap items-center gap-3">
+  <a
+    href={`tel:${brand.phonePrimary}`}
+    className="rounded-xl bg-white/20 px-5 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/40 hover:bg-white/30"
+  >
+    📞 Call {brand.phonePrimary}
+  </a>
+
+  <a
+    href={brand.whatsappLink}
+    className="rounded-xl bg-black/20 px-5 py-2 text-sm font-semibold text-white ring-1 ring-white/40 hover:bg-black/30"
+  >
+    💬 WhatsApp
+  </a>
+</div>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
               <div>🇦🇺 Melbourne-based</div>
