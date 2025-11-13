@@ -305,6 +305,7 @@ export default function PingCheckLanding() {
           </div>
         </div>
       </footer>
+      <PingChatWidget />
     </div>
   );
 }
