@@ -207,7 +207,7 @@ export default function PingCheckLanding() {
           <h3 className="text-center text-2xl font-bold text-white">
             What our clients say
           </h3>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               {
                 q: "PingCheck stabilised our Wi-Fi and secured our endpoints in one week.",
@@ -371,22 +371,28 @@ export default function PingCheckLanding() {
 
       {/* Floating Action Bar */}
       <div className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2">
-        <div className="flex gap-2 rounded-full border border-slate-700 bg-slate-950/95 p-2 shadow-lg backdrop-blur">
+        <div className="flex flex-wrap gap-2 rounded-full border border-slate-700 bg-slate-950/95 px-3 py-2 shadow-lg backdrop-blur">
           <a
             href={`tel:${brand.phonePrimary}`}
-            className="rounded-full bg-emerald-500 px-4 py-2 font-semibold text-slate-900"
+            className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900"
           >
             📞 Call
           </a>
           <a
+            href="#contact"
+            className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
+          >
+            🔍 Free IT Health Check
+          </a>
+          <a
             href={brand.whatsappLink}
-            className="rounded-full bg-slate-900 px-4 py-2 font-semibold text-white"
+            className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white"
           >
             💬 WhatsApp
           </a>
           <a
             href="#contact"
-            className="hidden rounded-full border border-slate-600 px-4 py-2 font-semibold text-slate-100 sm:inline"
+            className="hidden rounded-full border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-100 sm:inline"
           >
             Contact
           </a>
