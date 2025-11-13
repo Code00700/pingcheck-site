@@ -76,7 +76,7 @@ export default function PingCheckLanding() {
         </div>
       </div>
 
-      {/* HERO – Light Blue SaaS style (Option A) */}
+      {/* HERO – Light Blue SaaS style */}
       <section className="relative isolate bg-gradient-to-br from-white via-sky-100 to-sky-300 text-slate-900">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
           {/* LEFT SIDE: TEXT + BUTTONS */}
@@ -371,7 +371,7 @@ export default function PingCheckLanding() {
 
       {/* Floating Action Bar */}
       <div className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2">
-        <div className="flex flex-wrap gap-2 rounded-full border border-slate-700 bg-slate-950/95 px-3 py-2 shadow-lg backdrop-blur">
+        <div className="flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950/95 px-3 py-2 shadow-lg backdrop-blur">
           <a
             href={`tel:${brand.phonePrimary}`}
             className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900"
@@ -382,7 +382,10 @@ export default function PingCheckLanding() {
             href="#contact"
             className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
           >
-            🔍 Free IT Health Check
+            <span className="sm:hidden">🔍 Free IT Check</span>
+            <span className="hidden sm:inline">
+              🔍 Free IT Health Check
+            </span>
           </a>
           <a
             href={brand.whatsappLink}
