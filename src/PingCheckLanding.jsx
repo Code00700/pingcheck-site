@@ -15,22 +15,6 @@ const brand = {
 };
 
 export default function PingCheckLanding() {
-  const handleQuickFormSubmit = async (e) => {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    try {
-      await fetch("https://formspree.io/f/your-id", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
-      });
-      alert("Thanks! We'll call you shortly.");
-      e.currentTarget.reset();
-    } catch (err) {
-      alert("Sorry, something went wrong. Please call us directly.");
-    }
-  };
-
   const handleGenericFormSubmit = async (e) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
@@ -93,130 +77,129 @@ export default function PingCheckLanding() {
       </div>
 
       {/* HERO – Design A only */}
-<section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
-  <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
-    {/* LEFT SIDE: TEXT + BUTTONS */}
-    <div>
-      <h1 className="text-4xl font-black leading-tight md:text-5xl">
-        Smarter IT. Stronger Networks.{" "}
-        <span className="opacity-90">Secure Automation.</span>
-      </h1>
+      <section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
+          {/* LEFT SIDE: TEXT + BUTTONS */}
+          <div>
+            <h1 className="text-4xl font-black leading-tight md:text-5xl">
+              Smarter IT. Stronger Networks.{" "}
+              <span className="opacity-90">Secure Automation.</span>
+            </h1>
 
-      <p className="mt-4 max-w-prose text-white/90">
-        PingCheck keeps your business and home technology fast, protected,
-        and easy to manage — from Wi-Fi and cybersecurity to cloud and
-        automation.
-      </p>
+            <p className="mt-4 max-w-prose text-white/90">
+              PingCheck keeps your business and home technology fast, protected,
+              and easy to manage — from Wi-Fi and cybersecurity to cloud and
+              automation.
+            </p>
 
-      {/* MAIN BUTTON AREA */}
-      <div className="mt-8 w-full max-w-xl mx-auto md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Home Users */}
-        <a
-          href="/home"
-          className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
-        >
-          🏡 Home Users
-        </a>
+            {/* MAIN BUTTON AREA */}
+            <div className="mt-8 w-full max-w-xl mx-auto md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Home Users */}
+              <a
+                href="/home"
+                className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+              >
+                🏡 Home Users
+              </a>
 
-        {/* Business Users */}
-        <a
-          href="/business"
-          className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
-        >
-          🏢 Business Users
-        </a>
+              {/* Business Users */}
+              <a
+                href="/business"
+                className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+              >
+                🏢 Business Users
+              </a>
 
-        {/* Get Free IT Health Check – spans both columns on desktop */}
-        <a
-          href="#contact"
-          className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
-        >
-          🔍 Get Free IT Health Check
-        </a>
-      </div>
+              {/* Get Free IT Health Check – spans both columns on desktop */}
+              <a
+                href="#contact"
+                className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
+              >
+                🔍 Get Free IT Health Check
+              </a>
+            </div>
 
-      <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
-        <div>🇦🇺 Melbourne-based</div>
-        <div>✅ 24/7 Support</div>
-        <div>🔒 Cybersecurity First</div>
-      </div>
-    </div>
+            <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
+              <div>🇦🇺 Melbourne-based</div>
+              <div>✅ 24/7 Support</div>
+              <div>🔒 Cybersecurity First</div>
+            </div>
+          </div>
 
-       {/* RIGHT SIDE: SALES HIGHLIGHTS */}
-    <div>
-      <div className="rounded-3xl bg-white/95 text-slate-900 shadow-xl shadow-black/20 p-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
-          Made for growing teams
-        </p>
-        <h2 className="mt-2 text-2xl font-bold">
-          Perfect for modern Australian businesses.
-        </h2>
-        <p className="mt-2 text-sm text-slate-600">
-          We specialise in networks, security and cloud for:
-        </p>
+          {/* RIGHT SIDE: SALES HIGHLIGHTS */}
+          <div>
+            <div className="rounded-3xl bg-white/95 text-slate-900 shadow-xl shadow-black/20 p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
+                Made for growing teams
+              </p>
+              <h2 className="mt-2 text-2xl font-bold">
+                Perfect for modern Australian businesses.
+              </h2>
+              <p className="mt-2 text-sm text-slate-600">
+                We specialise in networks, security, and cloud for:
+              </p>
 
-        <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
-          <span className="rounded-full bg-slate-900 text-white px-3 py-1">
-            🛍 Retail & storefronts
-          </span>
-          <span className="rounded-full bg-emerald-500/10 text-emerald-700 px-3 py-1 border border-emerald-200">
-            🏥 Medical & clinics
-          </span>
-          <span className="rounded-full bg-indigo-500/10 text-indigo-700 px-3 py-1 border border-indigo-200">
-            🏢 Remote & multi-site teams
-          </span>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
+                <span className="rounded-full bg-slate-900 text-white px-3 py-1">
+                  🛍 Retail & storefronts
+                </span>
+                <span className="rounded-full bg-emerald-500/10 text-emerald-700 px-3 py-1 border border-emerald-200">
+                  🏥 Medical & clinics
+                </span>
+                <span className="rounded-full bg-indigo-500/10 text-indigo-700 px-3 py-1 border border-indigo-200">
+                  🏢 Remote & multi-site teams
+                </span>
+              </div>
+
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                <div className="rounded-2xl bg-slate-50 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
+                    NETWORK
+                  </div>
+                  <div className="text-sm font-bold text-slate-900">
+                    Stable Wi-Fi & VPN
+                  </div>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Design, deploy, and monitor your network.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-50 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
+                    SECURITY
+                  </div>
+                  <div className="text-sm font-bold text-slate-900">
+                    Lock down access
+                  </div>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Firewalls, endpoint security, and best-practice controls.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-50 p-3">
+                  <div className="text-xs font-semibold text-slate-500">
+                    MANAGED IT
+                  </div>
+                  <div className="text-sm font-bold text-slate-900">
+                    Simple monthly support
+                  </div>
+                  <p className="mt-1 text-xs text-slate-500">
+                    One fixed monthly fee for support and monitoring.
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-5 text-xs text-slate-500">
+                Start with a{" "}
+                <span className="font-semibold text-slate-900">
+                  free IT health check
+                </span>{" "}
+                – no lock-in contracts.
+              </p>
+            </div>
+          </div>
         </div>
-
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-          <div className="rounded-2xl bg-slate-50 p-3">
-            <div className="text-xs font-semibold text-slate-500">
-              NETWORK
-            </div>
-            <div className="text-sm font-bold text-slate-900">
-              Stable Wi-Fi & VPN
-            </div>
-            <p className="mt-1 text-xs text-slate-500">
-              Design, deploy, and monitor your network.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-slate-50 p-3">
-            <div className="text-xs font-semibold text-slate-500">
-              SECURITY
-            </div>
-            <div className="text-sm font-bold text-slate-900">
-              Lock down access
-            </div>
-            <p className="mt-1 text-xs text-slate-500">
-              Firewalls, endpoint security, and best-practice controls.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-slate-50 p-3">
-            <div className="text-xs font-semibold text-slate-500">
-              MANAGED IT
-            </div>
-            <div className="text-sm font-bold text-slate-900">
-              Simple monthly support
-            </div>
-            <p className="mt-1 text-xs text-slate-500">
-              One fixed monthly fee for support and monitoring.
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-5 text-xs text-slate-500">
-          Start with a{" "}
-          <span className="font-semibold text-slate-900">
-            free IT health check
-          </span>{" "}
-          – no lock-in contracts.
-        </p>
-      </div>
-    </div>
-
-</section>
-
+      </section>
 
       {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-14">
