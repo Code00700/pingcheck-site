@@ -93,54 +93,95 @@ export default function PingCheckLanding() {
       </div>
 
       {/* HERO – Design A only */}
-      <section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
-          <div>
-            <h1 className="text-4xl font-black leading-tight md:text-5xl">
-              Smarter IT. Stronger Networks.{" "}
-              <span className="opacity-90">Secure Automation.</span>
-            </h1>
-            <p className="mt-4 max-w-prose text-white/90">
-              PingCheck keeps your business and home technology fast, protected,
-              and easy to manage — from Wi-Fi and cybersecurity to cloud and
-              automation.
-            </p>
-            
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-                {/* MAIN BUTTON STACK */}
-<div className="mt-8 flex flex-col items-center gap-4 w-full max-w-md mx-auto">
+<section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
+    {/* LEFT SIDE: TEXT + BUTTONS */}
+    <div>
+      <h1 className="text-4xl font-black leading-tight md:text-5xl">
+        Smarter IT. Stronger Networks.{" "}
+        <span className="opacity-90">Secure Automation.</span>
+      </h1>
 
-  {/* MAIN BUTTON AREA */}
-<div className="mt-8 w-full max-w-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <p className="mt-4 max-w-prose text-white/90">
+        PingCheck keeps your business and home technology fast, protected,
+        and easy to manage — from Wi-Fi and cybersecurity to cloud and
+        automation.
+      </p>
 
-  {/* Home Users */}
-  <a
-    href="/home"
-    className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
-  >
-    🏡 Home Users
-  </a>
+      {/* MAIN BUTTON AREA */}
+      <div className="mt-8 w-full max-w-xl mx-auto md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Home Users */}
+        <a
+          href="/home"
+          className="rounded-2xl bg-white px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+        >
+          🏡 Home Users
+        </a>
 
-  {/* Business Users */}
-  <a
-    href="/business"
-    className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
-  >
-    🏢 Business Users
-  </a>
+        {/* Business Users */}
+        <a
+          href="/business"
+          className="rounded-2xl bg-emerald-400 px-8 py-4 text-center font-bold text-slate-900 shadow-lg hover:opacity-90 text-lg"
+        >
+          🏢 Business Users
+        </a>
 
-  {/* Get Free IT Health Check – spans both columns on desktop */}
-  <a
-    href="#contact"
-    className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
-  >
-    🔍 Get Free IT Health Check
-  </a>
+        {/* Get Free IT Health Check – spans both columns on desktop */}
+        <a
+          href="#contact"
+          className="md:col-span-2 rounded-2xl bg-black/30 px-8 py-4 text-center font-bold text-white ring-1 ring-white/40 hover:bg-black/40 text-lg animate-pulse"
+        >
+          🔍 Get Free IT Health Check
+        </a>
+      </div>
 
-</div>
+      <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
+        <div>🇦🇺 Melbourne-based</div>
+        <div>✅ 24/7 Support</div>
+        <div>🔒 Cybersecurity First</div>
+      </div>
+    </div>
 
+    {/* RIGHT SIDE: QUICK CONTACT FORM */}
+    <div>
+      <div className="rounded-3xl bg-white/95 text-slate-800 shadow-xl shadow-black/20">
+        <div className="border-b border-slate-200 p-4 font-semibold">
+          Quick Contact
+        </div>
+        <form className="grid gap-3 p-4" onSubmit={handleQuickFormSubmit}>
+          <input
+            className="rounded-xl border border-slate-300 px-4 py-3"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+          <input
+            className="rounded-xl border border-slate-300 px-4 py-3"
+            name="contact"
+            placeholder="Phone or email"
+            required
+          />
+          <textarea
+            className="rounded-xl border border-slate-300 px-4 py-3"
+            name="message"
+            placeholder="What do you need help with?"
+            rows={4}
+          />
+          <button
+            type="submit"
+            className="rounded-xl bg-slate-900 px-4 py-3 font-semibold text-white hover:opacity-90"
+          >
+            Request a Callback
+          </button>
+          <p className="text-xs text-slate-500">
+            Or call us now: {brand.phoneMobile}
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-      </section>
 
       {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-14">
