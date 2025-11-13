@@ -9,7 +9,14 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Missing messages array" });
   }
 
-  // Define some simple test service packages
+  if (!process.env.OPENAI_API_KEY) {
+    // This is the most common issue: env var not set in Vercel
+    return res.status(500).json({
+      error: "OPENAI_API_KEY is not set on the server",
+    });
+  }
+
+  // Simple test service packages description
   const servicePackagesDescription = `
 You MUST always recommend exactly ONE of these PingCheck service packages at the end of your response:
 
@@ -60,10 +67,13 @@ You MUST always recommend exactly ONE of these PingCheck service packages at the
     });
 
     const data = await apiRes.json();
+    console.log("OpenAI API response:", JSON.stringify(data, null, 2));
 
     if (!apiRes.ok) {
-      console.error("OpenAI API error:", data);
-      return res.status(500).json({ error: "OpenAI API error", details: data });
+      return res.status(500).json({
+        error: "OpenAI API error",
+        details: data,
+      });
     }
 
     const answer =
@@ -73,6 +83,9 @@ You MUST always recommend exactly ONE of these PingCheck service packages at the
     res.status(200).json({ reply: answer });
   } catch (err) {
     console.error("PingBot error:", err);
-    res.status(500).json({ error: "PingBot server error" });
+    res.status(500).json({
+      error: "PingBot server error",
+      details: err.message || String(err),
+    });
   }
 }
