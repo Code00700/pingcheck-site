@@ -76,8 +76,8 @@ export default function PingCheckLanding() {
         </div>
       </div>
 
-      {/* HERO – Light Azure style */}
-      <section className="relative isolate bg-gradient-to-br from-sky-50 via-sky-100 to-blue-200 text-slate-900">
+      {/* HERO – Light Blue SaaS style (Option A) */}
+      <section className="relative isolate bg-gradient-to-br from-white via-sky-100 to-sky-300 text-slate-900">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
           {/* LEFT SIDE: TEXT + BUTTONS */}
           <div>
@@ -113,7 +113,7 @@ export default function PingCheckLanding() {
               {/* Get Free IT Health Check – spans both columns on desktop */}
               <a
                 href="#contact"
-                className="md:col-span-2 rounded-2xl bg-blue-600 px-8 py-4 text-center font-bold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg animate-pulse"
+                className="md:col-span-2 rounded-2xl bg-indigo-600 px-8 py-4 text-center font-bold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg animate-pulse"
               >
                 🔍 Get Free IT Health Check
               </a>
