@@ -93,7 +93,7 @@ export default function PingCheckLanding() {
       </div>
 
       {/* HERO – Design A only */}
-      <section className="relative isolate bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white">
+      <section className="relative isolate bg-gradient-to-br from-sky-500 via-indigo-700 to-emerald-500 text-white">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
           <div>
             <h1 className="text-4xl font-black leading-tight md:text-5xl">
