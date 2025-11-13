@@ -33,23 +33,39 @@ export default function PingChatWidget() {
 
       const data = await res.json();
 
-      setMessages([
-        ...newMessages,
-        {
-          role: "assistant",
-          content:
-            data.reply ||
-            "Sorry, I had trouble generating a response. You can call or WhatsApp PingCheck instead.",
-        },
-      ]);
+      if (!res.ok) {
+        console.error("PingBot backend error:", data);
+        setMessages([
+          ...newMessages,
+          {
+            role: "assistant",
+            content:
+              "PingBot backend error: " +
+              (data.error || "Unknown error") +
+              (data.details ? `\n\nDetails: ${JSON.stringify(data.details)}` : ""),
+          },
+        ]);
+      } else {
+        setMessages([
+          ...newMessages,
+          {
+            role: "assistant",
+            content:
+              data.reply ||
+              "Sorry, I had trouble generating a response. You can call or WhatsApp PingCheck instead.",
+          },
+        ]);
+      }
     } catch (err) {
-      console.error(err);
+      console.error("PingBot frontend error:", err);
       setMessages([
         ...newMessages,
         {
           role: "assistant",
           content:
-            "Sorry, I couldn’t reach the PingCheck AI right now. You can call us or message us on WhatsApp instead.",
+            "PingBot frontend error: " +
+            (err.message || String(err)) +
+            "\n\nYou can call or WhatsApp PingCheck instead.",
         },
       ]);
     } finally {
