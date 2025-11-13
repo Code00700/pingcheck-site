@@ -134,22 +134,7 @@ export default function PingCheckLanding() {
   </a>
 </div>
 
-{/* SMALL SECONDARY BUTTONS */}
-<div className="mt-4 flex flex-wrap items-center gap-3">
-  <a
-    href={`tel:${brand.phonePrimary}`}
-    className="rounded-xl bg-white/20 px-5 py-2 text-sm font-semibold text-white backdrop-blur-md ring-1 ring-white/40 hover:bg-white/30"
-  >
-    📞 Call {brand.phonePrimary}
-  </a>
 
-  <a
-    href={brand.whatsappLink}
-    className="rounded-xl bg-black/20 px-5 py-2 text-sm font-semibold text-white ring-1 ring-white/40 hover:bg-black/30"
-  >
-    💬 WhatsApp
-  </a>
-</div>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-white/80">
               <div>🇦🇺 Melbourne-based</div>
