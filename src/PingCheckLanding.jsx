@@ -76,7 +76,7 @@ export default function PingCheckLanding() {
         </div>
       </div>
 
-      {/* HERO – Light Blue SaaS style */}
+      {/* HERO – Light Blue SaaS style (Option A) */}
       <section className="relative isolate bg-gradient-to-br from-white via-sky-100 to-sky-300 text-slate-900">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 md:grid-cols-2">
           {/* LEFT SIDE: TEXT + BUTTONS */}
@@ -369,50 +369,29 @@ export default function PingCheckLanding() {
         </div>
       </section>
 
-            {/* Floating Action Bar */}
-      <div className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2 w-full px-3 sm:px-0">
-        <div className="mx-auto flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950/95 px-3 py-2 shadow-lg backdrop-blur max-w-md">
-
-          {/* Call - Desktop only */}
+      {/* Floating Action Bar – reverted simple version */}
+      <div className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2">
+        <div className="flex gap-2 rounded-full border border-slate-700 bg-slate-950/95 p-2 shadow-lg backdrop-blur">
           <a
             href={`tel:${brand.phonePrimary}`}
-            className="hidden sm:inline rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900"
+            className="rounded-full bg-emerald-500 px-4 py-2 font-semibold text-slate-900"
           >
             📞 Call
           </a>
-
-          {/* Free IT Health Check – full label on desktop, short on mobile */}
-          <a
-            href="#contact"
-            className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
-          >
-            <span className="sm:hidden">🔍 Free IT Check</span>
-            <span className="hidden sm:inline">🔍 Free IT Health Check</span>
-          </a>
-
-          {/* WhatsApp – green on mobile, dark on desktop */}
           <a
             href={brand.whatsappLink}
-            className="
-              px-4 py-2 text-sm font-semibold rounded-full
-              bg-green-500 text-slate-900
-              sm:bg-slate-900 sm:text-white
-            "
+            className="rounded-full bg-slate-900 px-4 py-2 font-semibold text-white"
           >
             💬 WhatsApp
           </a>
-
-          {/* Contact – desktop only */}
           <a
             href="#contact"
-            className="hidden sm:inline rounded-full border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-100"
+            className="hidden rounded-full border border-slate-600 px-4 py-2 font-semibold text-slate-100 sm:inline"
           >
             Contact
           </a>
-
         </div>
       </div>
-
 
       {/* Footer */}
       <footer className="mt-20 border-t border-slate-800 bg-slate-950">
