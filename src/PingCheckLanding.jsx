@@ -105,22 +105,7 @@ export default function PingCheckLanding() {
               and easy to manage — from Wi-Fi and cybersecurity to cloud and
               automation.
             </p>
-            {/* Home & Business selector */}
-<div className="mt-6 flex flex-wrap items-center gap-4">
-  <a
-    href="/home"
-    className="rounded-2xl bg-white/20 px-5 py-3 font-semibold text-white backdrop-blur-md ring-1 ring-white/40 hover:bg-white/30"
-  >
-    🏡 Home Users
-  </a>
-  <a
-    href="/business"
-    className="rounded-2xl bg-black/30 px-5 py-3 font-semibold text-white ring-1 ring-white/40 hover:bg-black/40"
-  >
-    🏢 Business Users
-  </a>
-</div>
-
+            
             <div className="mt-6 flex flex-wrap items-center gap-3">
                 {/* MAIN USER PATH BUTTONS */}
 <div className="mt-8 flex flex-wrap items-center gap-4">
