@@ -1,3 +1,5 @@
+import PingChatWidget from "./PingChatWidget";
+
 const brand = {
   phonePrimary: "1300 000 000",
   phoneMobile: "+61 400 123 456",
