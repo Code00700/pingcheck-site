@@ -109,14 +109,6 @@ export default function PingCheckLanding() {
               >
                 🏢 Business Users
               </a>
-
-              {/* Get Free IT Health Check – spans both columns on desktop */}
-              <a
-                href="#contact"
-                className="md:col-span-2 rounded-2xl bg-indigo-600 px-8 py-4 text-center font-bold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition text-lg animate-pulse"
-              >
-                🔍 Get Free IT Health Check
-              </a>
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-slate-600">
@@ -126,75 +118,37 @@ export default function PingCheckLanding() {
             </div>
           </div>
 
-          {/* RIGHT SIDE: SALES HIGHLIGHTS – light, blended with hero */}
+          {/* RIGHT SIDE: Free IT Health Check focus */}
           <div>
-            <div className="rounded-3xl border border-slate-200/80 bg-white/80 text-slate-900 shadow-xl shadow-slate-300/40 backdrop-blur-xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700">
-                Made for growing teams
+            <div className="rounded-3xl border border-slate-200/80 bg-white/85 text-slate-900 shadow-xl shadow-slate-300/40 backdrop-blur-xl p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                Free IT Health Check
               </p>
               <h2 className="mt-2 text-2xl font-bold">
-                Perfect for modern Australian businesses.
+                Is your network really as healthy as you think?
               </h2>
               <p className="mt-2 text-sm text-slate-700">
-                We specialise in networks, security, and cloud for:
+                We&apos;ll review your Wi-Fi, internet, security and core IT
+                systems — and show you where things are slow, risky, or
+                over-complicated.
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium">
-                <span className="rounded-full bg-slate-900 text-white px-3 py-1">
-                  🛍 Retail & storefronts
-                </span>
-                <span className="rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 border border-emerald-200">
-                  🏥 Medical & clinics
-                </span>
-                <span className="rounded-full bg-indigo-50 text-indigo-700 px-3 py-1 border border-indigo-200">
-                  🏢 Remote & multi-site teams
-                </span>
-              </div>
+              <ul className="mt-4 space-y-1 text-sm text-slate-700">
+                <li>• Quick remote review by an engineer</li>
+                <li>• Plain-English findings (no jargon)</li>
+                <li>• Priority fixes you can action straight away</li>
+              </ul>
 
-              <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
-                  <div className="text-xs font-semibold text-slate-500">
-                    NETWORK
-                  </div>
-                  <div className="text-sm font-bold text-slate-900">
-                    Stable Wi-Fi & VPN
-                  </div>
-                  <p className="mt-1 text-xs text-slate-500">
-                    Design, deploy, and monitor your network.
-                  </p>
-                </div>
+              <a
+                href="#contact"
+                className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-indigo-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition"
+              >
+                🔍 Get my free IT health check
+              </a>
 
-                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
-                  <div className="text-xs font-semibold text-slate-500">
-                    SECURITY
-                  </div>
-                  <div className="text-sm font-bold text-slate-900">
-                    Lock down access
-                  </div>
-                  <p className="mt-1 text-xs text-slate-500">
-                    Firewalls, endpoint security, and best-practice controls.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-3">
-                  <div className="text-xs font-semibold text-slate-500">
-                    MANAGED IT
-                  </div>
-                  <div className="text-sm font-bold text-slate-900">
-                    Simple monthly support
-                  </div>
-                  <p className="mt-1 text-xs text-slate-500">
-                    One fixed monthly fee for support and monitoring.
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-5 text-xs text-slate-600">
-                Start with a{" "}
-                <span className="font-semibold text-slate-900">
-                  free IT health check
-                </span>{" "}
-                – no lock-in contracts.
+              <p className="mt-2 text-[11px] text-slate-500">
+                No charge. No lock-in. Just clear advice tailored to your home
+                or business.
               </p>
             </div>
           </div>
@@ -253,7 +207,7 @@ export default function PingCheckLanding() {
           <h3 className="text-center text-2xl font-bold text-white">
             What our clients say
           </h3>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
             {[
               {
                 q: "PingCheck stabilised our Wi-Fi and secured our endpoints in one week.",
